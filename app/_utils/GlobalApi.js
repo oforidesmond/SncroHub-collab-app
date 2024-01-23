@@ -6,9 +6,16 @@ const axiosClient=axios.create({
 });
 
 const createUser=(data)=>axiosClient.post('/user',data)
+const getUserByEmail=(email)=>axiosClient.get('/user/'+email)
 
+const createPost=(data)=>axiosClient.post('/post',data);
+
+const getAllPosts=()=>axiosClient.get('/post');
 
 
 export default{
-createUser
+createUser,
+getUserByEmail,
+createPost,
+getAllPosts
 }
